@@ -5,6 +5,7 @@ import Header from "./Components/Pages/Header/Header";
 import PageNotFound from "./Components/Features/PageNotFound/PageNotFound";
 import { Route } from "react-router-dom";
 import Home from "./Components/Pages/Home/Home";
+import Table from "./Components/Features/Table/Table";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/table" element={<Table />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
         <Footer />
