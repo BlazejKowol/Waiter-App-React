@@ -10,9 +10,9 @@ const AllTables = () => {
   return (
     <Container>
         {tables.map(table => (
-        <section className="row p-0 border-bottom">
+        <section key={table.id} className="row p-0 border-bottom">
             <Col className="col-lg-2 p-0 d-flex align-items-center">
-                <h3 className="text-center m-0">Table {table.id}</h3>
+                <h3 className="text-center m-0 ">Table {table.id}</h3>
             </Col>
             <Col className="col-lg-4 p-0 d-flex align-items-center">
                 <p className="m-0"><strong>Status: </strong>{table.status}</p>
