@@ -2,9 +2,11 @@ import { createStore, combineReducers, compose, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import initialState from './initialState';
 import tablesReducer from './tablesReducer';
+import statusReducer from './statusReducer';
 
 const subreducers = {
   tables: tablesReducer,
+  status: statusReducer,
 }
 
 const reducer = combineReducers(subreducers);

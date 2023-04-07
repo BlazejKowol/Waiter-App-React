@@ -1,12 +1,17 @@
 import { Button, Container } from "react-bootstrap";
 import { Form } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { updateTablesRequest } from "../../../redux/tablesReducer";
 
-const Table = () => {
+const TableForm = () => {
 
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const handleSubmit = () => {
+    //dispatch(updateTablesRequest({
+      //id, status, peopleAmount, maxPeopleAmount, bill}));
     navigate("/");
   }
 
@@ -27,4 +32,4 @@ const Table = () => {
   );
 };
 
-export default Table;
+export default TableForm;

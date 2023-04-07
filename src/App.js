@@ -5,15 +5,25 @@ import Header from "./Components/Pages/Header/Header";
 import PageNotFound from "./Components/Features/PageNotFound/PageNotFound";
 import { Route } from "react-router-dom";
 import Home from "./Components/Pages/Home/Home";
-import Table from "./Components/Features/Table/Table";
+import TableForm from "./Components/Features/TableForm/TableForm";
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
+import { fetchTables } from "./redux/tablesReducer";
+import { fetchStatus } from "./redux/statusReducer";
 
-function App() {
+const App = () => {
+  
+  const dispatch = useDispatch();
+
+  useEffect(() => dispatch(fetchTables()), [dispatch]);
+  useEffect(() => dispatch(fetchStatus()), [dispatch]);
+
   return (
     <Container>
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/table" element={<Table />} />
+          <Route path="/table/:id" element={<TableForm />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
         <Footer />
