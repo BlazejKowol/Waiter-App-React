@@ -1,10 +1,10 @@
-import { Col } from "react-bootstrap";
+import { Col, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 
 const AllTables = () => {
   return (
-    <div className="container">
+    <Container>
         <section className="row p-0 border-bottom">
             <Col className="col-lg-1 p-0 d-flex align-items-center">
                 <h3 className="text-center">Table</h3>
@@ -18,7 +18,7 @@ const AllTables = () => {
                 </button>
             </Link>
         </section>
-    </div>
+    </Container>
   );
 };
 

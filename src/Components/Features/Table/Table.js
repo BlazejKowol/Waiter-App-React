@@ -1,8 +1,24 @@
+import { Button, Container } from "react-bootstrap";
+import { Form } from "react-bootstrap";
+
 const Table = () => {
+
+  const handleSubmit = () => {}
+
   return (
-    <section className="row border-bottom">
-        <p>I'm the table</p>
-    </section>
+    <Container>
+        <h3>Table 1,2,3</h3>
+        <Form onSubmit={handleSubmit}>
+          <Form.Label>Status:</Form.Label>
+          <Form.Select />
+          <Form.Label>People:</Form.Label>
+          <Form.Control />/
+          <Form.Control />
+          <Form.Label>Bill: </Form.Label>
+          $ <Form.Control />
+          <Button type="submit">Update</Button>
+        </Form>
+    </Container>
   );
 };
 
