@@ -1,9 +1,14 @@
 import { Button, Container } from "react-bootstrap";
 import { Form } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 const Table = () => {
 
-  const handleSubmit = () => {}
+  const navigate = useNavigate();
+
+  const handleSubmit = () => {
+    navigate("/");
+  }
 
   return (
     <Container>
