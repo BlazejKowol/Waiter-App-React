@@ -20,9 +20,10 @@ const TableForm = () => {
   const [maxPeopleAmount, setMaxPeopleAmount] = useState(tableData.maxPeopleAmount);
   const [bill, setBill] = useState(tableData.bill);
 
-  const handleSubmit = () => {
-    //dispatch(updateTablesRequest({
-      //id, status, peopleAmount, maxPeopleAmount, bill}));
+  const handleSubmit = e => {
+    e.preventDefault();
+    dispatch(updateTablesRequest({
+      id, status, peopleAmount, maxPeopleAmount, bill}));
     navigate("/");
   }
 

@@ -24,15 +24,15 @@ export const updateTablesRequest = (editTables) => {
         'Content-Type': 'application/json'
       },
         body: JSON.stringify({
-        id: '1',
-        status: 'busy',
-        peopleAmount: 3,
-        maxPeopleAmount: 4,
-        bill: 45
+        id: editTables.id,
+        status: editTables.status,
+        peopleAmount: editTables.peopleAmount,
+        maxPeopleAmount: editTables.maxPeopleAmount,
+        bill: editTables.bill,
       }),
     };
     
-    fetch('http://localhost:3131/tables/1', options)
+    fetch(`http://localhost:3131/tables/${editTables.id}`, options)
       .then(() => dispatch(updateTables(editTables)));
   }
 }
