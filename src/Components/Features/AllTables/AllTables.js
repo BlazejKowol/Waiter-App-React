@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { getAllTables } from "../../../redux/tablesReducer";
 import Spinner from 'react-bootstrap/Spinner';
 
-const AllTables = ({action}) => {
+const AllTables = () => {
 
   const tables = useSelector(getAllTables); 
 
@@ -21,7 +21,7 @@ const AllTables = ({action}) => {
                 <p className="m-0"><strong>Status: </strong>{table.status}</p>
             </Col>
             <Link className="col d-flex my-2 p-0 justify-content-end text-decoration-none text-light" to={`/table/${table.id}`}>
-                <button action={action} type="submit" className="text-white border border-none bg-primary rounded py-2">
+                <button type="submit" className="text-white border border-none bg-primary rounded py-2">
                     Show more
                 </button>
             </Link>           
