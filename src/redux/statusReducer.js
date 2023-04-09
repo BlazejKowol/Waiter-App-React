@@ -12,8 +12,12 @@ export const updateStatus = payload => ({type: UPDATE_STATUS, payload});
 export const fetchStatus = () => {
   return (dispatch) => {
   fetch(`${API_URL}/status`)
-  .then(res => res.json())
-  .then(status => dispatch(updateStatus(status)));
+  .then(res => { 
+    if (res.status === 200) {
+    return res.json()
+      .then(status => dispatch(updateStatus(status)))
+      }
+    });
   };
 };
 

@@ -14,8 +14,12 @@ export const updateTables = payload => ({type: UPDATE_TABLES, payload});
 export const fetchTables = () => {
   return (dispatch) => {
   fetch(`${API_URL}/tables`)
-  .then(res => res.json())
-  .then(tables => dispatch(updateTables(tables)));
+  .then(res => {
+    if (res.status === 200) {
+      return res.json()
+        .then(tables => dispatch(updateTables(tables)))
+      }
+    });
   };
 };
 export const updateTablesRequest = (editTables) => {
