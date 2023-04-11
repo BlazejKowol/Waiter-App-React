@@ -2,23 +2,23 @@
   "tables": [
     {
       "id": "1",
-      "status": "Free",
+      "status": "Busy",
       "peopleAmount": "4",
       "maxPeopleAmount": "4",
-      "bill": "54"
+      "bill": "20"
     },
     {
       "id": "2",
-      "status": "Busy",
+      "status": "Cleaning",
       "peopleAmount": "6",
       "maxPeopleAmount": "6",
       "bill": "23"
     },
     {
       "id": "3",
-      "status": "Cleaning",
-      "peopleAmount": "1",
-      "maxPeopleAmount": "4",
+      "status": "Busy",
+      "peopleAmount": "5",
+      "maxPeopleAmount": "5",
       "bill": "20"
     },
     {

@@ -50,7 +50,7 @@ const TableForm = () => {
                   value={status}
                   onChange={e => setStatus(e.target.value)}>
                   {tableStatus.map(tStatus => (
-                  <option>
+                  <option key={tStatus}>
                     {tStatus}
                   </option>))}
                 </Form.Select>
